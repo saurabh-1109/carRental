@@ -1,0 +1,433 @@
+/* =========================================
+   PAYMENT PAGE
+========================================= */
+
+.payment-page {
+  min-height: 100vh;
+
+  position: relative;
+
+  padding: 80px 20px 50px;
+
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+
+  font-family: Arial, sans-serif;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.payment-back-btn {
+  position: absolute;
+
+  top: 25px;
+  left: 30px;
+
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.payment-back-btn:hover {
+  background: #2563eb;
+
+  transform: translateX(-3px);
+}
+
+/* =========================================
+   PAYMENT CARD
+========================================= */
+
+.payment-card {
+  width: 100%;
+
+  max-width: 600px;
+
+  margin: auto;
+
+  padding: 35px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.payment-card h1 {
+  margin: 0;
+
+  text-align: center;
+
+  color: #111827;
+}
+
+.payment-subtitle {
+  text-align: center;
+
+  color: #64748b;
+
+  margin-bottom: 25px;
+}
+
+/* =========================================
+   AMOUNT
+========================================= */
+
+.payment-amount {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px;
+
+  background: #111827;
+
+  border-radius: 12px;
+
+  color: white;
+
+  margin-bottom: 25px;
+}
+
+.payment-amount strong {
+  color: #60a5fa;
+
+  font-size: 22px;
+}
+
+/* =========================================
+   PAYMENT OPTIONS
+========================================= */
+
+.payment-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 17px;
+
+  margin-bottom: 12px;
+
+  border: 2px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.payment-option:hover {
+  border-color: #93c5fd;
+
+  background: #f8fafc;
+}
+
+.payment-option.selected {
+  border-color: #2563eb;
+
+  background: #eff6ff;
+}
+
+.payment-option input {
+  accent-color: #2563eb;
+}
+
+.payment-option strong {
+  color: #111827;
+}
+
+.payment-option p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   PICKUP BOX
+========================================= */
+
+.pickup-box {
+  margin-top: 20px;
+
+  padding: 20px;
+
+  background: #f8fafc;
+
+  border-radius: 12px;
+}
+
+.pickup-box h3 {
+  margin-top: 0;
+}
+
+/* =========================================
+   CARD FORM
+========================================= */
+
+.card-form {
+  margin-top: 25px;
+}
+
+.card-form h3 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #334155;
+}
+
+.form-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =========================================
+   CARD ROW
+========================================= */
+
+.card-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+/* =========================================
+   CONFIRM BUTTON
+========================================= */
+
+.confirm-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* =========================================
+   CONFIRMATION OVERLAY
+========================================= */
+
+.confirmation-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.65);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+}
+
+/* =========================================
+   CONFIRMATION CARD
+========================================= */
+
+.confirmation-card {
+  width: 100%;
+
+  max-width: 400px;
+
+  padding: 35px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+  animation: confirmationPop 0.35s ease;
+}
+
+@keyframes confirmationPop {
+  from {
+    opacity: 0;
+
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   SUCCESS ICON
+========================================= */
+
+.success-icon {
+  width: 65px;
+
+  height: 65px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+
+  color: white;
+
+  font-size: 35px;
+
+  font-weight: bold;
+}
+
+.confirmation-card h2 {
+  margin-bottom: 10px;
+
+  color: #111827;
+}
+
+.confirmation-card p {
+  color: #64748b;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   DONE BUTTON
+========================================= */
+
+.done-btn {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.done-btn:hover {
+  background: #2563eb;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .payment-page {
+    padding: 80px 15px 30px;
+  }
+
+  .payment-back-btn {
+    left: 15px;
+  }
+
+  .payment-card {
+    padding: 25px 18px;
+  }
+
+  .card-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

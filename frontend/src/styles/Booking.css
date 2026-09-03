@@ -1,0 +1,841 @@
+css
+/* =====================================================
+   MAIN BOOKING PAGE
+===================================================== */
+
+.booking-page {
+  min-height: 100vh;
+
+  padding: 80px 30px 40px;
+
+  background: #f3f6fa;
+
+  box-sizing: border-box;
+
+  position: relative;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-button {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  padding: 10px 18px;
+
+  background: #ffffff;
+
+  color: #222;
+
+  border: 1px solid #d5dce5;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+  z-index: 10;
+}
+
+.back-button:hover {
+  background: #222;
+
+  color: #fff;
+
+  transform: translateX(-3px);
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   BOOKINGS CONTAINER
+===================================================== */
+
+.bookings-container {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+
+  gap: 22px;
+
+  align-items: start;
+}
+
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+
+.bookings-container > h1 {
+  grid-column: 1 / -1;
+
+  text-align: center;
+
+  margin: 0 0 10px;
+
+  color: #222;
+
+  font-size: 32px;
+}
+
+
+/* =====================================================
+   BOOKING CARD
+===================================================== */
+
+.booking-card {
+  width: 100%;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  text-align: left;
+
+  transition: 0.25s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   BOOKING HEADER
+===================================================== */
+
+.booking-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.booking-header h2 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 20px;
+}
+
+
+/* =====================================================
+   BOOKING STATUS
+===================================================== */
+
+.booking-status {
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.booking-status.pending {
+  background: #fff3cd;
+
+  color: #856404;
+}
+
+.booking-status.confirmed {
+  background: #d1fae5;
+
+  color: #047857;
+}
+
+.booking-status.cancelled {
+  background: #fee2e2;
+
+  color: #b91c1c;
+}
+
+
+/* =====================================================
+   BOOKING SECTIONS
+===================================================== */
+
+.booking-section {
+  margin-bottom: 16px;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.booking-section h3 {
+  margin: 0 0 10px;
+
+  font-size: 15px;
+
+  color: #555;
+}
+
+
+/* =====================================================
+   BOOKING INFORMATION LINE
+===================================================== */
+
+.booking-line {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  margin: 8px 0;
+
+  font-size: 13px;
+}
+
+.booking-line span {
+  color: #777;
+
+  flex-shrink: 0;
+}
+
+.booking-line strong {
+  color: #222;
+
+  text-align: right;
+
+  word-break: break-word;
+}
+
+
+/* =====================================================
+   TOTAL AMOUNT
+===================================================== */
+
+.booking-total {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin: 15px 0;
+
+  padding: 13px;
+
+  background: #f5f7fa;
+
+  border-radius: 8px;
+}
+
+.booking-total span {
+  color: #555;
+
+  font-size: 14px;
+}
+
+.booking-total strong {
+  font-size: 18px;
+
+  color: #222;
+}
+
+
+/* =====================================================
+   PAYMENT STATUS
+===================================================== */
+
+.booking-payment-status {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 12px 0;
+
+  border-top: 1px solid #eee;
+
+  font-size: 14px;
+}
+
+.booking-payment-status span {
+  color: #777;
+}
+
+.booking-payment-status strong {
+  color: #dc2626;
+}
+
+.paid-text {
+  color: #16a34a !important;
+}
+
+
+/* =====================================================
+   CANCEL BOOKING BUTTON
+===================================================== */
+
+.cancel-booking-btn {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 11px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.cancel-booking-btn:hover {
+  background: #fecaca;
+}
+
+
+/* =====================================================
+   EXPLORE CARS BUTTON
+===================================================== */
+
+.explore-car-btn {
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  font-size: 15px;
+}
+
+.explore-car-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =====================================================
+   EXPLORE BUTTON AT BOTTOM OF BOOKINGS
+===================================================== */
+
+.bookings-container > .explore-car-btn {
+  grid-column: 1 / -1;
+
+  justify-self: center;
+
+  margin-top: 5px;
+}
+
+
+/* =====================================================
+   EMPTY / LOGIN / ERROR CARD
+===================================================== */
+
+.booking-empty-card {
+  width: 450px;
+
+  max-width: 90%;
+
+  min-height: 250px;
+
+  padding: 40px 30px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: 50px auto 0;
+}
+
+.booking-empty-card h2 {
+  margin: 0 0 12px;
+
+  color: #222;
+
+  font-size: 25px;
+}
+
+.booking-empty-card p {
+  margin: 0 0 20px;
+
+  color: #666;
+
+  line-height: 1.5;
+
+  font-size: 15px;
+}
+
+.booking-empty-card .explore-car-btn {
+  margin-top: 5px;
+}
+
+
+/* =====================================================
+   ALREADY CANCELLED BOOKING
+===================================================== */
+
+.already-cancelled {
+  position: relative;
+
+  margin-top: 15px;
+
+  padding: 15px 40px 15px 15px;
+
+  border-radius: 8px;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+}
+
+.already-cancelled strong {
+  color: #b91c1c;
+}
+
+.already-cancelled p {
+  margin: 5px 0 0;
+
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   CLOSE CANCELLED BOOKING BUTTON
+===================================================== */
+
+.close-cancelled-btn {
+  position: absolute;
+
+  top: 8px;
+  right: 10px;
+
+  width: 28px;
+  height: 28px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #fee2e2;
+
+  color: #b91c1c;
+
+  font-size: 20px;
+
+  line-height: 25px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.close-cancelled-btn:hover {
+  background: #dc2626;
+
+  color: white;
+}
+
+
+/* =====================================================
+   CANCEL POPUP OVERLAY
+===================================================== */
+
+.cancel-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 9999;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CANCEL POPUP
+===================================================== */
+
+.cancel-popup {
+  width: 400px;
+
+  max-width: 100%;
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+
+  animation: popupOpen 0.2s ease;
+}
+
+
+/* =====================================================
+   POPUP ANIMATION
+===================================================== */
+
+@keyframes popupOpen {
+  from {
+    transform: scale(0.9);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   WARNING ICON
+===================================================== */
+
+.cancel-icon {
+  width: 55px;
+
+  height: 55px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #fff3cd;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 27px;
+}
+
+
+/* =====================================================
+   CANCEL POPUP TEXT
+===================================================== */
+
+.cancel-popup h2 {
+  margin: 0 0 10px;
+
+  color: #222;
+}
+
+.cancel-popup p {
+  color: #666;
+
+  line-height: 1.5;
+
+  margin: 8px 0;
+}
+
+.cancel-car-name {
+  display: block;
+
+  font-size: 18px;
+
+  margin: 10px 0;
+
+  color: #222;
+}
+
+
+/* =====================================================
+   REFUND MESSAGE
+===================================================== */
+
+.refund-note {
+  background: #f0fdf4;
+
+  color: #166534 !important;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  margin-top: 18px !important;
+}
+
+.thank-you {
+  font-weight: 600;
+
+  color: #333 !important;
+}
+
+
+/* =====================================================
+   CANCEL POPUP ACTION BUTTONS
+===================================================== */
+
+.cancel-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.keep-booking-btn,
+.confirm-cancel-btn {
+  flex: 1;
+
+  padding: 11px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.keep-booking-btn {
+  background: #f1f5f9;
+
+  color: #334155;
+}
+
+.keep-booking-btn:hover {
+  background: #e2e8f0;
+}
+
+.confirm-cancel-btn {
+  background: #dc2626;
+
+  color: white;
+}
+
+.confirm-cancel-btn:hover {
+  background: #b91c1c;
+}
+
+
+/* =====================================================
+   SUCCESS POPUP
+===================================================== */
+
+.success-cancel-icon {
+  width: 60px;
+
+  height: 60px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 30px;
+
+  font-weight: bold;
+}
+
+.success-popup .explore-car-btn {
+  margin-top: 15px;
+}
+
+
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+  .bookings-container {
+    grid-template-columns: repeat(
+      2,
+      minmax(280px, 1fr)
+    );
+  }
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 650px) {
+  .booking-page {
+    padding: 75px 15px 30px;
+  }
+
+  .bookings-container {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .bookings-container > h1 {
+    font-size: 27px;
+  }
+
+  .booking-card {
+    max-width: 450px;
+
+    margin: 0 auto;
+  }
+
+  .booking-header h2 {
+    font-size: 18px;
+  }
+
+  .booking-line {
+    font-size: 12px;
+  }
+
+  .booking-empty-card {
+    margin-top: 40px;
+
+    padding: 30px 20px;
+  }
+
+  .back-button {
+    top: 15px;
+
+    left: 15px;
+
+    padding: 9px 15px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 400px) {
+  .booking-page {
+    padding-left: 10px;
+
+    padding-right: 10px;
+  }
+
+  .booking-card {
+    padding: 16px;
+  }
+
+  .booking-header {
+    align-items: flex-start;
+  }
+
+  .booking-status {
+    font-size: 10px;
+
+    padding: 5px 8px;
+  }
+
+  .cancel-actions {
+    flex-direction: column;
+  }
+}
+

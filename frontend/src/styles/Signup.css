@@ -1,0 +1,462 @@
+/* =========================================
+   SIGNUP PAGE
+========================================= */
+
+.maindiv {
+  min-height: 100vh;
+  width: 100%;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(59, 130, 246, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(14, 165, 233, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #0b1220, #111c31 55%, #0f172a);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 40px 20px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   MAIN SIGNUP CARD
+========================================= */
+
+.maindiv::before {
+  content: "";
+
+  position: absolute;
+
+  width: 980px;
+  height: 560px;
+
+  max-width: calc(100% - 40px);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+
+  backdrop-filter: blur(12px);
+}
+
+/* =========================================
+   LEFT SIDE HEADING
+========================================= */
+
+.maindiv > h1 {
+  position: absolute;
+
+  left: calc(50% - 450px);
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 380px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 48px;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  line-height: 1.1;
+
+  z-index: 2;
+}
+
+/* Small decorative line under heading */
+
+.maindiv > h1::after {
+  content: "";
+
+  display: block;
+
+  width: 55px;
+  height: 4px;
+
+  margin-top: 18px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+}
+
+/* =========================================
+   SIGNUP FORM
+========================================= */
+
+.signupForm {
+  position: relative;
+
+  z-index: 3;
+
+  width: 490px;
+
+  height: 560px;
+
+  margin-left: 490px;
+
+  background: #ffffff;
+
+  padding: 55px 55px;
+
+  box-sizing: border-box;
+
+  border-radius: 0 24px 24px 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.signupForm .form-group {
+  margin-bottom: 18px;
+}
+
+/* =========================================
+   INPUT
+========================================= */
+
+.signupForm .form-group input {
+  width: 100%;
+
+  height: 54px;
+
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d6dce5;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+/* Placeholder */
+
+.signupForm .form-group input::placeholder {
+  color: #94a3b8;
+}
+
+/* =========================================
+   INPUT HOVER
+========================================= */
+
+.signupForm .form-group input:hover {
+  border-color: #94a3b8;
+}
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.signupForm .form-group input:focus {
+  border-color: #111827;
+
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08);
+
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   LOGIN LINK
+========================================= */
+
+#loginLink {
+  display: block;
+
+  color: #111827;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-align: right;
+
+  margin-top: -2px;
+
+  margin-bottom: 24px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+#loginLink:hover {
+  color: #2563eb;
+
+  text-decoration: underline;
+}
+
+/* =========================================
+   SIGNUP BUTTON
+========================================= */
+
+.signupForm .btn {
+  width: 100%;
+
+  height: 54px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+}
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.signupForm .btn:hover {
+  background: #1f2937;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.22);
+}
+
+/* =========================================
+   BUTTON ACTIVE
+========================================= */
+
+.signupForm .btn:active {
+  transform: translateY(0);
+
+  box-shadow: 0 5px 12px rgba(15, 23, 42, 0.15);
+}
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.signup-success {
+  text-align: center;
+
+  margin-top: 18px;
+
+  color: #16a34a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  background: #f0fdf4;
+
+  padding: 10px;
+
+  border-radius: 8px;
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.signup-error {
+  text-align: center;
+
+  margin-top: 18px;
+
+  color: #dc2626;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  background: #fef2f2;
+
+  padding: 10px;
+
+  border-radius: 8px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .maindiv {
+    padding: 30px 20px;
+  }
+
+  .maindiv::before {
+    width: 90%;
+    height: 520px;
+  }
+
+  .maindiv > h1 {
+    left: 10%;
+
+    width: 35%;
+
+    font-size: 40px;
+  }
+
+  .signupForm {
+    width: 50%;
+
+    height: 520px;
+
+    margin-left: 40%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .maindiv {
+    min-height: 100vh;
+
+    padding: 30px 20px;
+
+    flex-direction: column;
+
+    justify-content: center;
+  }
+
+  .maindiv::before {
+    display: none;
+  }
+
+  /* Heading */
+
+  .maindiv > h1 {
+    position: static;
+
+    transform: none;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 36px;
+
+    margin-bottom: 25px;
+  }
+
+  .maindiv > h1::after {
+    margin: 15px auto 0;
+  }
+
+  /* Form */
+
+  .signupForm {
+    width: 100%;
+
+    max-width: 480px;
+
+    height: auto;
+
+    min-height: 500px;
+
+    margin-left: 0;
+
+    padding: 40px 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+  .maindiv {
+    padding: 25px 15px;
+  }
+
+  .maindiv > h1 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+  }
+
+  .signupForm {
+    padding: 35px 22px;
+
+    min-height: 480px;
+
+    border-radius: 16px;
+  }
+
+  .signupForm .form-group input {
+    height: 50px;
+
+    font-size: 14px;
+  }
+
+  .signupForm .btn {
+    height: 50px;
+
+    font-size: 15px;
+  }
+
+  #loginLink {
+    font-size: 13px;
+  }
+}
